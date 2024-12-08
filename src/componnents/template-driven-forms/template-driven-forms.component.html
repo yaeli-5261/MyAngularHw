@@ -1,0 +1,30 @@
+<p>template-driven-forms works!</p>
+<form (ngSubmit)="OnSubmit()">
+  
+    <label for="teacherId">TeacherId:</label>
+    <input id="teacherId" [(ngModel)]="teacher.teacherId" name="id" required>
+
+
+    <label for="teacherName">TeacherName:</label>
+    <input id="teacherName" [(ngModel)]="teacher.teacerName" name="name"required>
+
+
+    <label for="teacherClass">teacherClass:</label>
+    <input id="teacherClass" [(ngModel)]="teacher.teacherClass" name="clases" required>
+
+    <button type="submit">Submit</button>
+
+
+
+</form>
+
+
+<div style="border: solid 2px palevioletred">
+    <div>ListTeachers:</div>
+    
+    @for (t of this.techersArr; track techersArr) {
+        <br/>
+         {{t.teacherId}} , {{t.teacerName}} , {{t.teacherClass}}
+        <br/>
+    }
+</div>

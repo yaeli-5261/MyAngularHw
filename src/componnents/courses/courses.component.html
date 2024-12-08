@@ -1,0 +1,16 @@
+<p>courses works!</p>
+<div id="list">
+    @for (item of courses;  track courses) {
+    
+    <li (click)="updateCourse(item)" appCourseDirective  [color]="colorArr[i]">{{item.IdCourses}}    {{item.NaneCourses}}      {{item.subject}}</li>
+    {{pushI()}}
+}
+</div>
+
+<div id="list2">
+    @for (item of select;  track select) {
+        
+    <li> {{item.NaneCourses}}  {{item.IdCourses}}   {{item.subject}}</li>
+    {{pushI()}}
+}
+</div>

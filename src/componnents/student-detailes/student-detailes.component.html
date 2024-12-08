@@ -1,0 +1,17 @@
+<app-infromation-popup></app-infromation-popup>
+
+<div>
+<p>  {{stud.Id}}  {{stud.firstName}}  {{stud.lastName}}
+     @if(!stud.isActive)
+     {
+        {{stud.departureDate}}
+     }
+    </p>
+
+     id:<input #id type="number">
+     firstName:<input #firstName type="string">
+     lastName:<input #lastName type="string">,
+
+<button (click)="childSave(+id.value,firstName.value,lastName.value)">Save</button>
+<button (click)="DeleteStudent()">delete</button>
+</div>

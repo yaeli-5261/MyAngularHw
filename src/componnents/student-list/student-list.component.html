@@ -1,0 +1,31 @@
+<p>student-list works!</p>
+<ng-container *ngTemplateOutlet="ng_tmplate1">
+
+</ng-container>
+@for(std of students; track std){
+<li>
+   {{std.Id}} {{std.firstName}} {{std.lastName}}
+</li>
+
+<button (click)="update(std)">עריכה</button>
+@if(std.flag){
+<app-student-detailes [stud]="std"></app-student-detailes>}
+
+@if(std.isPay){
+   <app-courses></app-courses>
+}
+}
+
+<br>
+<ng-content *ngTemplateOutlet="ng_tmplate1"></ng-content
+   >
+
+<br>
+<button (click)="turnOnButton()" >add student</button>
+<br>
+@if(buttonAdd){
+   <app-student-detailes (saveStudent)="ParentSave($event)" ></app-student-detailes>
+}
+<ng-template #ng_tmplate1>
+   <h1>------------רשימת התלמידות ----------</h1>
+</ng-template>

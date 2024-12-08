@@ -1,0 +1,5 @@
+#list{
+    border-radius: 2 solid black;
+    height: 40px;
+    overflow-y: scroll;
+}
