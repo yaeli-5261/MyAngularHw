@@ -2,15 +2,15 @@
 <form (ngSubmit)="OnSubmit()">
   
     <label for="teacherId">TeacherId:</label>
-    <input id="teacherId" [(ngModel)]="teacher.teacherId" name="id" required>
+    <input id="teacherId" [(ngModel)]="teacher.teacherId" name="id" required [minlength]="0">
 
 
     <label for="teacherName">TeacherName:</label>
-    <input id="teacherName" [(ngModel)]="teacher.teacerName" name="name"required>
+    <input id="teacherName" [(ngModel)]="teacher.teacerName" name="name" required required [minlength]="2">
 
 
     <label for="teacherClass">teacherClass:</label>
-    <input id="teacherClass" [(ngModel)]="teacher.teacherClass" name="clases" required>
+    <input id="teacherClass" [(ngModel)]="teacher.teacherClass" name="clases" required required [minlength]="4">
 
     <button type="submit">Submit</button>
 
@@ -24,7 +24,7 @@
     
     @for (t of this.techersArr; track techersArr) {
         <br/>
-         {{t.teacherId}} , {{t.teacerName}} , {{t.teacherClass}}
+         {{t.teacherId}} , {{t.teacerName}} , {{t.teacherClass}} 
         <br/>
     }
 </div>

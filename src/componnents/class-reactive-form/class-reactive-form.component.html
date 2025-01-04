@@ -1,0 +1,17 @@
+<p>class-reactive-form works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div formArrayName="classes">
+        <div *ngFor="let class of classes.controls; let i = index" [formGroupName]="i">
+            <label for="idClass{{i}}">Id Class:</label>
+            <input id="idClass{{i}}" formControlName="idClass">
+            <label for="nameClass{{i}}">Name Class:</label>
+            <input id="nameClass{{i}}" formControlName="nameClass">
+            <label for="nameTeacher{{i}}">Name Teacher:</label>
+            <input id="nameTeacher{{i}}" formControlName="nameTeacher">
+        </div>
+    </div>
+<button type="button"(click)="addClass()">Add class</button>
+<button type="submit"> Submit</button>
+
+</form>
