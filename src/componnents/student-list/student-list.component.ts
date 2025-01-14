@@ -8,7 +8,7 @@ import { CoursesComponent } from "../courses/courses.component";
   standalone: true,
   imports: [StudentDetailesComponent, NgTemplateOutlet, CoursesComponent],
   templateUrl: './student-list.component.html',
-  styleUrl: './student-list.component.css'
+  styleUrl: './student-list.component.css',
 })
 export class StudentListComponent {
   public students:student[]=[new student(1,"yaeli","naaman"),new student(2,"ruty","choen"),new student(1,"shira","levi")];

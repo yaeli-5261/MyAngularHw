@@ -15,6 +15,7 @@ export class CourseServiceService {
     new courses(1,"cSharp",enumCourses.cSharp),
     new courses(2,"phtyon",enumCourses.phtyon),
     new courses(3,"Grafick",enumCourses.Grafick),
+    
   ]
   constructor() { }
   getCourses(){

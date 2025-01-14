@@ -5,4 +5,5 @@
             Grafick='Grafick',
             phtyon='phtyon',
             cSharp="cSharp",
+            Math="Math",
         }

@@ -24,9 +24,8 @@ export class StudentDetailesComponent {
     console.log(this.s)
 
    }
-    DeleteStudent(){
+      DeleteStudent(){
       this.child.ShowPopUp('האם בטוח שברצונך למחוק את התלמיד?');
     }
 
 }
-

@@ -1,0 +1,7 @@
+<p>connect-api works!</p>
+@for(e of (eventService.events$ | async); track e.id){
+    {{e | json}}   
+   }
+   @empty{
+      <div>אנחנו עובדים בשבילך</div> 
+   }
